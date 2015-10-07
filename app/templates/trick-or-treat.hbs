@@ -1,1 +1,7 @@
 {{outlet}}
+
+<!-- here we want a list of neighborhoods -->
+<p>List of neighborhoods:</p>
+{{#each model as |neighborhood|}}
+    <p>{{#link-to 'neighborhood' neighborhood}}{{neighborhood.name}}{{/link-to}}</p>
+{{/each}}

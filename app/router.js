@@ -8,8 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('kids', {});
   this.route('adults', {});
-  this.route('trickOrTreat', {});
-
+  this.route('trick-or-treat', {});
+  this.route('neighborhood', {path: 'neighborhood/:neighborhood_id'});
   this.route('activities', {});
 });
 
