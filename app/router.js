@@ -6,11 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-
   this.route('kids', {});
   this.route('adults', {});
   this.route('trickOrTreat', {});
 
+  this.route('activities', {});
 });
 
 export default Router;
