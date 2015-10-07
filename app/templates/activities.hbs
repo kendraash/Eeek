@@ -4,3 +4,15 @@
   <h2><a href="kids">Kids </a> | </h2>
   <h2> <a href="adults"> 21 and Over</a></h2>
 </header>
+
+
+{{new-category save="save"}}
+
+
+<div>
+  <ul>
+  {{#each model as |category|}}
+    <li>{{category.name}}</li>
+  {{/each}}
+  </ul>
+</div>
