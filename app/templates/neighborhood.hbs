@@ -1,4 +1,17 @@
-{{outlet}}
-<p>Here will be our neighborhood details!</p>
+
+<header class = "jumbotron">
+  <h1>Here's the Spook!</h1>
+  <h2><a href="kids">Hold Up</a> | </h2>
+  <h2> <a href="adults">Wait a Minute</a></h2>
+</header>
 {{neighborhood-detail neighborhood=model}}
-{{new-house saveHouse='saveHouse'}}
+{{new-house saveNewHouse='saveNewHouse' neighborhood=model}}
+
+
+<div>
+  <ul>
+  {{#each model.houses as |house|}}
+    <li>{{house.description}}</li>
+  {{/each}}
+  </ul>
+</div>

@@ -1,7 +1,13 @@
 {{outlet}}
-
+<header class = "jumbotron">
+  <h1>Haunted Hoods</h1>
+  <h2><a href="kids">Hold Me </a> | </h2>
+  <h2> <a href="adults"> I'm scared!</a></h2>
+</header>
 <!-- here we want a list of neighborhoods -->
-<p>List of neighborhoods:</p>
+<h2>Choose your Spooky Spot:</h2>
 {{#each model as |neighborhood|}}
-    <p>{{#link-to 'neighborhood' neighborhood}}{{neighborhood.name}}{{/link-to}}</p>
+    <h3>{{#link-to 'neighborhood' neighborhood}}{{neighborhood.name}}{{/link-to}}</h3>
 {{/each}}
+
+{{new-neighborhood saveNewNeighborhood='saveNewNeighborhood'}}

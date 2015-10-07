@@ -18,3 +18,15 @@ a:hover {
   color: orange;
   text-decoration: none;
 }
+
+#btn-circle {
+  width: 49px;
+  height: 49px;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 15px;
+  line-height: 2.00;
+  border-radius: 30px;
+  background-color: orange;
+  color: white;
+}
