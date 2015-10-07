@@ -2,6 +2,6 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   name: DS.attr(),
-  comment: DS.attr(),
-  house: DS.belongsTo('house', {async: true})
+  house: DS.hasMany('house', {async: true}),
+  location: DS.attr() 
 });
