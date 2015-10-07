@@ -6,9 +6,10 @@ export default Ember.Route.extend({
   },
   actions: {
     save(params) {
+
       var newCategory = this.store.createRecord('category', params);
       newCategory.save();
-      this.TransitionTo('activities');
+      this.transitionTo('activities');
     }
   }
 });

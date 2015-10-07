@@ -8,11 +8,10 @@ export default Ember.Component.extend({
     },
    save() {
     var params = {
-      name: this.get('name'),
-      activities: this.get('activities')
+      name: this.get('name')
     };
-    this.set("addNewCategory", false),
-    this.sendAction('save', params)
+    this.set("addNewCategory", false);
+    this.sendAction('save', params);
     }
   }
 });
