@@ -1,6 +1,5 @@
-{{neighborhood.name}}
-{{neighborhood.location}}
+<h2>{{neighborhood.name}} in {{neighborhood.location}}.</h2>
 <br>
 {{#each neighborhood.houses as |house|}}
-    <p>{{house.description}}</p>
+    <h3>{{house.description}}</h3>
 {{/each}}

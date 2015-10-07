@@ -5,10 +5,11 @@ export default Ember.Route.extend({
     return this.store.findRecord('neighborhood', params.neighborhood_id);
   },
    actions: {
-     saveHouse(params) {
+     saveNewHouse(params) {
      var newHouse = this.store.createRecord('house', params);
      newHouse.save();
-     this.transitionTo('neighborhood');
-       }
+     params.neighborhood.save();
+     this.transitionTo('neighborhood', params.neighborhood);
+    }
   }
 });

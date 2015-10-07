@@ -1,0 +1,26 @@
+{{yield}}
+{{#if addNewNeighborhood}}
+<h3>New Neighborhood</h3>
+
+<div>
+      <div class="row">
+        <div class="col-md-4">
+          <form>
+            <div class="form-group">
+              <label for="name" placeholder="Alphabet District">Neighborhood</label>
+              {{input value=name id="name"  class="form-control input-lg"}}
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location</label>
+              {{input value=location id="location"  class="form-control input-lg"}}
+            </div>
+
+          <button {{action 'saveNewNeighborhood'}} class="btn btn-default" id="btn-circle">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <button {{action 'neighborhoodFormShow'}} class="btn btn-default" id="btn-circle">+hood</button>
+{{/if}}
