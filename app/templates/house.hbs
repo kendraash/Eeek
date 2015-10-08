@@ -1,15 +1,20 @@
-
-<h2>{{model.description}}</h2>
-<h3>Rating: {{model.rating}}</h3>
-<h4>{{model.address}}</h4><br>
-<img class="img-round" src={{model.image}}>
-{{outlet}}
-
+<div class="jumbotron">
+  <h2>{{model.description}}</h2>
+  <h3>{{model.address}}</h3>
+  <h3>Eeek{{pumpkin-counter model.rating}}</h3><br>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <img class="img-round" src={{model.image}}>
+  </div>
+  <div class="col-sm-6">
+    {{google-map model=model}}
+  </div>
+</div>
+<br>
 <h4>Reviews:</h4>
 {{#each model.reviews as |review|}}
   <h5>{{review.name}} says: {{review.comment}}</h5>
 {{/each}}
 {{new-review saveNewReview='saveNewReview' house=model}}
-
-
-{{google-map model=model}}
+{{outlet}}

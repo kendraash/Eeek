@@ -1,7 +1,6 @@
-<h2>{{neighborhood.name}} in {{neighborhood.location}}.</h2>
+<h2>Spooky Houses in {{neighborhood.name}}</h2>
 <br>
-<h4>Houses in this Hood</h4>
 
 {{#each neighborhood.houses as |house|}}
-    <h3>{{#link-to 'house' house}}{{house.description}} | rating:{{house.rating}}{{/link-to}}</h3> 
+    <h3>{{#link-to 'house' house}}{{house.description}} | rating:{{house.rating}}{{/link-to}}</h3>
 {{/each}}

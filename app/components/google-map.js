@@ -1,10 +1,10 @@
 import Ember from 'ember';
 export default Ember.Component.extend({
+  showMapButton: true,
   map: Ember.inject.service('google-map'),
-
   actions: {
     showMap(model) {
-
+      this.set('showMapButton', false);
       var container = this.$('.map-display')[0];
       var options = {
         center: this.get('map').center(45.5200, -122.6819),
