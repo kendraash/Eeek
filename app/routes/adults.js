@@ -6,6 +6,13 @@ export default Ember.Route.extend({
         activities: this.store.findAll('activity'),
         categories: this.store.findAll('category')
       });
-
+    },
+  actions: {
+    save(params) {
+      var newActivity = this.store.createRecord('activity', params);
+      newActivity.save();
+      params.category.save();
+      this.transitionTo('adults');
+    }
   }
 });

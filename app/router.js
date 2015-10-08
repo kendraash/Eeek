@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('neighborhood', {path: 'neighborhood/:neighborhood_id'});
   this.route('activities', {});
   this.route('house', {path: 'house/:house_id'});
+  this.route('category', {path: '/category/:category_id'});
 });
 
 export default Router;

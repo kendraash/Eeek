@@ -1,3 +1,17 @@
+body {
+  color: #011f4b;
+  /*background: url("/images/.jpg") center top no-repeat;
+  background-size: cover;*/
+}
+
+.home-page img{
+   text-align: center;
+}
+
+a {
+  color: #011f4b;
+}
+
 .jumbotron {
   text-align: center;
 }
@@ -6,8 +20,18 @@
   color: #011f4b;
 }
 
+h1 {
+  font-size: 50px;
+  color: orange;
+}
+
+.navbar {
+  font-size: 2em;
+}
+
 h2 {
   display: inline;
+  font-size: 3.5em;
 }
 
 .jumbotron a {
@@ -44,4 +68,15 @@ a:hover {
   width: 600px;
   height: 600px;
 
+.activity-img {
+  padding: 10px;
+  height: 130px;
+  width: 170px;
+}
+.navbar-brand {
+  font-size: 2em;
+}
+
+.navbar-nav {
+  font-size: .8em;
 }
