@@ -1,0 +1,15 @@
+
+<h2>{{model.description}}</h2>
+<h3>Rating: {{model.rating}}</h3>
+<h4>{{model.address}}</h4><br>
+<img class="img-round" src={{model.image}}>
+{{outlet}}
+
+<h4>Reviews:</h4>
+{{#each model.reviews as |review|}}
+  <h5>{{review.name}} says: {{review.comment}}</h5>
+{{/each}}
+{{new-review saveNewReview='saveNewReview' house=model}}
+
+
+{{google-map model=model}}

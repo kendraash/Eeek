@@ -6,5 +6,5 @@ export default DS.Model.extend({
   neighborhood: DS.belongsTo('neighborhood', { async: true}),
   image: DS.attr(),
   rating: DS.attr('number'),
-  review: DS.hasMany('review', { async: true})
+  reviews: DS.hasMany('review', { async: true})
 });

@@ -54,6 +54,20 @@ a:hover {
   background-color: orange;
   color: white;
 }
+
+.img-round, .img-round img {
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 300px; /* Saf3+, Chrome */
+  border-radius: 300px; /* Opera 10.5, IE 9 */
+  -moz-border-radius: 300px;  Disabled for FF1+
+}
+
+.map-display {
+  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+
 .activity-img {
   padding: 10px;
   height: 130px;
