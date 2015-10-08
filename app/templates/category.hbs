@@ -5,9 +5,23 @@
   <h2> <a href="adults"> 21 and Over</a></h2>
 </header>
 
-<h2>Category: {{model.name}}</h2>
-<ul>
-  {{#each model.activities as |activity| }}
-    <li>{{activity.name}}</li>
-  {{/each}}
-</ul>
+<center>
+<h2>{{model.name}}</h2><br>
+</center>
+
+{{#each model.activities as |activity| }}
+  {{#if activity.kid }}
+
+  <center>
+    <h3>(Kid Friendly)</h3>
+  </center>
+    <h3>{{activity.name}}</h3>
+  {{else}}
+
+  <center>
+    <h3>(21 and Over)</h3>
+  </center>
+
+    <h3>{{activity.name}}, <h5>{{activity.city}} OR</h5></h3>
+  {{/if}}
+{{/each}}
