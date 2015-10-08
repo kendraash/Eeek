@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('trick-or-treat', {});
   this.route('neighborhood', {path: 'neighborhood/:neighborhood_id'});
   this.route('activities', {});
+  this.route('house', {path: 'house/:house_id'});
 });
 
 export default Router;

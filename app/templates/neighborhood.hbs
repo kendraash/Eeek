@@ -6,12 +6,3 @@
 </header>
 {{neighborhood-detail neighborhood=model}}
 {{new-house saveNewHouse='saveNewHouse' neighborhood=model}}
-
-
-<div>
-  <ul>
-  {{#each model.houses as |house|}}
-    <li>{{house.description}}</li>
-  {{/each}}
-  </ul>
-</div>
