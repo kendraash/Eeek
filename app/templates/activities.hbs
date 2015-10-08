@@ -7,13 +7,13 @@
 </header>
 
 
-{{new-category save="save"}}
 
-
-<div>
-  <ul>
-  {{#each model as |category|}}
-    <li>{{category.name}}</li>
-  {{/each}}
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    {{#each model as |category| }}
+    <li style="padding: 5px; text-align: center;">{{#link-to "category" category}}{{category.name}}{{/link-to}}</li>
+    {{/each}}
   </ul>
-</div>
+</nav>
+
+{{new-category save="save"}}

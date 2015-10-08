@@ -4,7 +4,13 @@
   <h2><a href="kids">Kids </a> | </h2>
   <h2> <a href="adults"> 21 and Over</a></h2>
 </header>
-
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+    {{#each model.categories as |category| }}
+      <li style="padding: 5px; text-align: center;">{{#link-to "category" category}}{{category.name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+</nav>
 <h2>21 and Over</h2>
 
 {{new-activity categories=model.categories save = "save"}}
@@ -12,7 +18,7 @@
 <ul>
   {{#each model.activities as |activity| }}
     {{#if (eq activity.kid false)}}
-      <li>{{activity.name}}</li>
+      <li>{{activity.name}} </li>
       <img src="{{activity.image}}" class = "activity-img" />
     {{/if}}
   {{/each}}

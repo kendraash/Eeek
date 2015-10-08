@@ -13,8 +13,9 @@ export default Ember.Component.extend({
       zipCode: this.get('zipCode'),
       image: this.get('image'),
       kid: this.get('kid'),
-      category: this.get('category')
+      category: this.get('category'),
     };
+      debugger;
     this.set("addNewActivity", false);
     this.sendAction('save', params);
     }
