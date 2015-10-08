@@ -33,7 +33,6 @@ h2 {
 
 h3 {
   color: white;
-
 }
 
 .jumbotron a {
@@ -63,6 +62,14 @@ label {
   border-radius: 30px;
   background-color: orange;
   color: white;
+}
+
+.activities img {
+  width: 300px;
+  height: 300px;
+  -webkit-border-radius: 300px; /* Saf3+, Chrome */
+  border-radius: 300px; /* Opera 10.5, IE 9 */
+  -moz-border-radius: 300px;  Disabled for FF1+
 }
 
 .img-round, .img-round img {
