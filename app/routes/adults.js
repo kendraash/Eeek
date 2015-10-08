@@ -11,6 +11,7 @@ export default Ember.Route.extend({
     save(params) {
       var newActivity = this.store.createRecord('activity', params);
       newActivity.save();
+      params.category.save();
       this.transitionTo('adults');
     }
   }
