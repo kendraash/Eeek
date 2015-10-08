@@ -30,3 +30,8 @@ a:hover {
   background-color: orange;
   color: white;
 }
+.activity-img {
+  padding: 10px;
+  height: 130px;
+  width: 170px;
+}

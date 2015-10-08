@@ -9,3 +9,12 @@
 <h2>kids</h2>
 
 {{new-activity categories=model.categories save = "save"}}
+
+<ul>
+  {{#each model.activities as |activity| }}
+    {{#if activity.kid }}
+      <li>{{activity.name}}</li>
+      <img src="{{activity.image}}" class = "activity-img" />
+    {{/if}}
+  {{/each}}
+</ul>

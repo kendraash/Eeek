@@ -13,6 +13,7 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 * [x-select](https://github.com/thefrontside/emberx-select)
+* [truth-helpers](https://www.npmjs.com/package/ember-truth-helpers)
 
 ## Installation
 
