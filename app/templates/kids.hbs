@@ -1,16 +1,9 @@
 {{outlet}}
 <header class = "jumbotron">
-  <h1>Activities</h1>
+  <h1><a href="activities"> Activities <img src="/images/skull2.jpg" alt="skull" style="width:80px;height:80px;"></a></h1>
   <h2><a href="kids">Kids </a> | </h2>
   <h2> <a href="adults"> 21 and Over</a></h2>
 </header>
-<nav class="navbar navbar-default">
-  <ul class="nav navbar-nav">
-    {{#each model.categories as |category| }}
-    <li style="padding: 5px; text-align: center;">{{#link-to "category" category}}{{category.name}}{{/link-to}}</li>
-    {{/each}}
-  </ul>
-</nav>
 
 <center>
 <h2>Kids</h2>
@@ -18,11 +11,15 @@
 
 {{new-activity categories=model.categories save = "save"}}
 
-<ul>
+<div class="activities">
+
   {{#each model.activities as |activity| }}
-    {{#if activity.kid }}
-      <li>{{activity.name}}</li>
+  <div class="col-md-4">
+    {{#if activity.kid}}
+      <h3>{{activity.name}} <h5> {{activity.city}}, OR </h5></h3>
       <img src="{{activity.image}}" class = "img-round" />
     {{/if}}
+  </div>
   {{/each}}
-</ul>
+
+</div>
