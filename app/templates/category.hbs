@@ -1,27 +1,27 @@
 {{outlet}}
 <header class = "jumbotron">
   <h1>Activities</h1>
-  <h2><a href="kids">Kids </a> | </h2>
-  <h2> <a href="adults"> 21 and Over</a></h2>
+  <h2><img src="/images/kid-friendly.png"> <a href="kids">Kids </a> | </h2>
+  <h2> <a href="adults"> 21 and Over</a> <img src="/images/no-kids.png"></h2>
 </header>
 
 <center>
 <h2>{{model.name}}</h2><br>
 </center>
 
+
 {{#each model.activities as |activity| }}
+
   {{#if activity.kid }}
 
   <center>
-    <h3>(Kid Friendly)</h3>
+    <h3>{{activity.name}} <img src="/images/kid-friendly.png" > <h5>{{activity.city}} OR</h5> </h3><br>
   </center>
-    <h3>{{activity.name}}, <h5>{{activity.city}} OR</h5> </h3>
   {{else}}
 
-  <center>
-    <h3>(21 and Over)</h3>
-  </center>
 
-    <h3>{{activity.name}}, <h5>{{activity.city}} OR</h5></h3>
+  <center>
+    <h3>{{activity.name}} <img src="/images/no-kids.png"> <h5>{{activity.city}} OR</h5> </h3><br>
+  </center>
   {{/if}}
 {{/each}}
