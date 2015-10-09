@@ -9,10 +9,9 @@
 <h2>Kids</h2>
 </center><br>
 
-{{new-activity categories=model.categories save = "save"}}
 
 <div class="activities">
-
+<div class="row">
   {{#each model.activities as |activity| }}
   <div class="col-md-4">
     {{#if activity.kid}}
@@ -21,5 +20,10 @@
     {{/if}}
   </div>
   {{/each}}
-
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+{{new-activity categories=model.categories save = "save"}}
