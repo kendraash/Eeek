@@ -1,17 +1,22 @@
 <div class="jumbotron">
-  <h2>{{model.description}}</h2>
-  <h3>{{model.address}}</h3>
-  <h3>Eeek{{pumpkin-counter model.rating}}</h3><br>
+  <h1>{{model.description}}</h1>
 </div>
+<center>
+<h2>Rating: {{{pumpkin-counter model.rating}}}</h2>
+</center>
+<br>
 <div class="row">
+  <center>
   <div class="col-sm-6">
     <img class="img-round" src={{model.image}}>
   </div>
   <div class="col-sm-6">
-    {{google-map model=model}}
+    {{google-map model=model}}<br>
   </div>
+</center>
 </div>
 <br>
+
 <h4>Reviews:</h4>
 {{#each model.reviews as |review|}}
   <h5>{{review.name}} says: {{review.comment}}</h5>
