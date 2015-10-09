@@ -1,6 +1,8 @@
-<h2>Spooky Houses in {{neighborhood.name}}</h2>
+<h1>Spooky Houses in {{neighborhood.name}}</h1>
 <br>
-
+<br>
+<h2>
 {{#each neighborhood.houses as |house|}}
-    <h3>{{#link-to 'house' house}}{{house.description}} | rating: {{house.rating}}{{/link-to}}</h3>
+    {{#link-to 'house' house}}{{house.description}} | {{house.rating}}<img src="/images/candy-corn.png " height="38">s{{/link-to}}<br>
 {{/each}}
+</h2>
