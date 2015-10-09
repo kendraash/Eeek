@@ -5,9 +5,16 @@
 
 </header>
 <!-- here we want a list of neighborhoods -->
-<h2>Choose your Hood</h2>
+<center>
+<h1>Choose your Hood</h1>
+</center>
+<br>
 {{#each model as |neighborhood|}}
-    <h3>{{#link-to 'neighborhood' neighborhood}}{{neighborhood.name}}{{/link-to}}</h3>
+<center>
+    <h2>{{#link-to 'neighborhood' neighborhood}}{{neighborhood.name}}{{/link-to}}</h2>
+</center>
 {{/each}}
-
+<br>
+<center>
 {{new-neighborhood saveNewNeighborhood='saveNewNeighborhood'}}
+</center>
