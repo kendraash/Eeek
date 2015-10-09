@@ -15,7 +15,6 @@ export default Ember.Component.extend({
       kid: this.get('kid'),
       category: this.get('category'),
     };
-      debugger;
     this.set("addNewActivity", false);
     this.sendAction('save', params);
     }
